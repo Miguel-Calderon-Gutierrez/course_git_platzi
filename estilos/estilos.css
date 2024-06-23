@@ -3,3 +3,8 @@ body{
     color: blueviolet;
     text-align: center;
 }
+
+.cabecera{
+    background-color: red;
+    color: white;
+}
