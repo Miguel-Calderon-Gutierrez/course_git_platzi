@@ -1,9 +1,0 @@
-git init // for start to use git in your project
-git status // for see the status of the repository
-git rm --cached historia.txt // for remove this file the memory in git
-git add . // for add this file the memory 
-git commit "este es el primer commit"
-git config --global user.name "Miguel Calderon"
-git config --global user.email "miguelcalderon.dev@gmail.com"
-git show historia.txt // for see the changues of that file
-
