@@ -12,19 +12,29 @@ Esta guía te proporcionará los comandos básicos para comenzar a usar Git en t
 git status
 ```
 ### 3.Eliminar un archivo del área de preparación (staging area):
-`git rm --cached historia.txt`
+```bash
+git rm --cached historia.txt
+```
 ### 4.Agregar archivos al área de preparación:
-`git add .`
+```bash
+git add .
+```
 ### 5.Hacer un commit:
 `git commit -m "este es el primer commit"`
 ### 6.Configurar tu nombre de usuario y correo electrónico:
-`git config --global user.name "Miguel Calderon"`
-`git config --global user.email "miguelcalderon.dev@gmail.com"`
+```bash
+git config --global user.name "Miguel Calderon"
+git config --global user.email "miguelcalderon.dev@gmail.com"
+```
 ### 7.Ver Cambios y Diferencias
 #### Ver los cambios de un archivo específico:
-`git show historia.txt`
+```bash
+git show historia.txt
+```
 ##### Ver las diferencias entre dos versiones:
-`git diff version1 version2`
+```bash
+git diff version1 version2
+```
 ## Historial y Versiones
 
 ### Obtener el historial de commits:
