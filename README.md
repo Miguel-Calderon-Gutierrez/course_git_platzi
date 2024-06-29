@@ -20,7 +20,9 @@ git rm --cached historia.txt
 git add .
 ```
 ### 5.Hacer un commit:
-`git commit -m "este es el primer commit"`
+```bash
+git commit -m "este es el primer commit"
+```
 ### 6.Configurar tu nombre de usuario y correo electrónico:
 ```bash
 git config --global user.name "Miguel Calderon"
