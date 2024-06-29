@@ -1,0 +1,167 @@
+
+# Guía de Git en Español
+
+Esta guía te proporcionará los comandos básicos para comenzar a usar Git en tu proyecto y manejar tu repositorio de manera eficiente.
+
+## Inicialización y Configuración Básica
+
+1. **Iniciar un repositorio Git:**
+   ```bash
+   git init
+   ```
+
+2. **Ver el estado del repositorio:**
+   ```bash
+   git status
+   ```
+
+3. **Eliminar un archivo del área de preparación (staging area):**
+   ```bash
+   git rm --cached historia.txt
+   ```
+
+4. **Agregar archivos al área de preparación:**
+   ```bash
+   git add .
+   ```
+
+5. **Hacer un commit:**
+   ```bash
+   git commit -m "este es el primer commit"
+   ```
+
+6. **Configurar tu nombre de usuario y correo electrónico:**
+   ```bash
+   git config --global user.name "Miguel Calderon"
+   git config --global user.email "miguelcalderon.dev@gmail.com"
+   ```
+
+## Ver Cambios y Diferencias
+
+7. **Ver los cambios de un archivo específico:**
+   ```bash
+   git show historia.txt
+   ```
+
+8. **Ver las diferencias entre dos versiones:**
+   ```bash
+   git diff version1 version2
+   ```
+
+9. **Ver el historial de commits:**
+   ```bash
+   git log
+   ```
+
+10. **Volver a una versión específica:**
+    ```bash
+    git checkout version
+    ```
+
+## Clonar y Fusionar
+
+11. **Clonar un repositorio remoto:**
+    ```bash
+    git clone <url-del-repositorio>
+    ```
+
+12. **Crear y cambiar a una nueva rama:**
+    ```bash
+    git branch cabecera
+    git checkout cabecera
+    ```
+
+13. **Fusionar una rama a la rama principal (main):**
+    ```bash
+    git checkout main
+    git merge rama2
+    ```
+
+## Trabajo con Repositorios Remotos
+
+14. **Agregar un origen remoto:**
+    ```bash
+    git remote add origin https://github.com/...
+    ```
+
+15. **Enviar cambios al origen remoto:**
+    ```bash
+    git push origin main
+    ```
+
+16. **Actualizar el repositorio local con cambios del remoto:**
+    ```bash
+    git pull origin main
+    ```
+
+17. **Combinar historias no relacionadas:**
+    ```bash
+    git pull origin main --allow-unrelated-histories
+    ```
+
+## Alias y Etiquetas
+
+18. **Crear un alias para comandos largos:**
+    ```bash
+    alias arbolito="git log --all --graph --decorate --oneline"
+    arbolito
+    ```
+
+19. **Crear etiquetas para versiones del código:**
+    ```bash
+    git tag -a v0.1 -m "primera versión del proyecto" 093cc72
+    ```
+
+20. **Subir etiquetas al repositorio remoto:**
+    ```bash
+    git push origin --tags
+    ```
+
+21. **Eliminar etiquetas innecesarias:**
+    ```bash
+    git tag -d TagQueQuieroBorrar
+    git push origin --tags
+    git push origin :ref/tags/TagQueQuieroBorrar
+    ```
+
+## Manejo de Ramas
+
+22. **Ver todas las ramas:**
+    ```bash
+    git branch
+    ```
+
+23. **Ver todas las ramas históricamente:**
+    ```bash
+    git show-branch --all
+    ```
+
+24. **Ver las ramas de forma visual:**
+    ```bash
+    gitk
+    ```
+
+25. **Enviar ramas al remoto:**
+    ```bash
+    git checkout rama2
+    git push origin rama2
+    ```
+
+26. **Crear nuevas ramas desde la versión más reciente:**
+    ```bash
+    git checkout main
+    git branch header
+    git branch footer
+    ```
+
+## Colaboración y Actualización de Forks
+
+27. **Hacer un merge con la rama de un extraño mediante un pull request en GitHub, revisado por un líder de equipo.**
+
+28. **Traer cambios de un proyecto open-source al que hiciste fork:**
+    ```bash
+    git remote add upstream https://github.com/otroUsuario/repoAlQueHiceFork
+    git pull upstream main
+    git commit -am "fusión"
+    git push origin master
+    ```

@@ -1,0 +1,167 @@
+git init // for start to use git in your project
+git status // for see the status of the repository
+git rm --cached historia.txt // for remove this file the memory in git
+git add . // for add this file the memory 
+git commit "este es el primer commit"
+git config --global user.name "Miguel Calderon"
+git config --global user.email "miguelcalderon.dev@gmail.com"
+git show historia.txt // for see the changues of that file
+git diff version1 version2 // for see the diferents that this fiel with the last versión
+git log // for get the history of commits in this repository
+git checkout version //volvemos a la versión 
+git clone //traigo una copia del server remoto al local
+
+git branch cabecera //crea la rama
+git checkout cabecera // mover a rama 
+// en la rama main
+git merge rama2 //todo sale bien si no hay conflictos de lineas
+
+
+//agregar un origen remoto
+git remote add origin https://github.com/...
+
+//enviar cambios al origen remoto
+git push origin main
+
+//si hay cambios en el remoto hay que agregarlos a local
+git pull origin main
+
+//combinar historias (hace un merge en local)
+git pull origin main --allow-unrelated-histories
+
+//enviar cambios al origen remoto luego de solucionar problemas
+git push origin main
+
+
+//crear un alias para comandos largos
+alias arbolito="git log --all --graph --decorate --oneline"
+arbolito 
+
+
+//crear tags para las versiones del código
+git tag -a v0.1 -m "Primer versión del proyecto" 9550633da410bf2
+
+//subir las tags al repo remoto
+git push origin --tags
+//eliminar los tags que no necesitamos 
+git tag -d TagQueQuieroBorrar
+//subir las tags al repo remoto (luego de borrar)
+git push origin --tags
+//borrar en GitHub
+git push origin :ref/tags/TagQueQuieroBorrar
+
+//ver todas las ramas
+git Branch
+//ver todas las ramas historicamente
+git show-branch --all
+//ver de forma visual
+gitk
+
+//enviar ramas al remoto 
+git checkout rama2
+git push origin rama2
+
+
+//crear nuevas ramas siempre desde la rama con la versión más reciente
+git checkout main
+git branch header
+git branch footer
+
+//clonar 
+git clone repo.com
+
+//hacer merge con la rama de un extraño, se hacer un pull request en GitHub, lo revisa un líder de equipo
+toca desde github
+
+//traer los cambios de un proyecto opensource al que le hice fork
+git remote add upstream https//GitHub.com/otrosUsuario/repoAlQueHiceFork
+git pull upstream main
+git commit -am "fusión"
+pit push origin master
+
+//rebase pegar los cambios, pegar la historia de una rama a otra, es para hacer cambios silenciosos, no queda historia
+git rebase main //desde la rama experimental
+git rabase experimento // desde la rama main
+
+// cambios temporales 
+git stash
+git stash pop
+git stash branch nuevaRama
+git stash drop
+
+
+//limpiar tu proyecto de proyectos que no quieres indexar y que no están en el git ignore
+git clean --dry-run 
+git clean -f
+
+
+
+//trae commits antiguos, uno en especifico de otra rama crea un conflicto para solucionar manualmente
+git cherry-pick dca2a24
+
+
+//traer todo de una versión anterior
+git reflog
+git reset --HARD c944564645 //vuelve a esa versión y restaura todo y borra todo lo que se haya hecho antes de esa cabecera 
+
+
+//agregar cambios a commit anterior 
+git commit --amend
+
+//buscar palabras
+git grep palabraABuscar
+//contar palabras
+git grep -c lapalabraquequierocontar
+
+//buscar en palabra historia de commits
+git log -s "palabra"
+
+
+//alias inernos en git 
+
+git shortlog -sn = muestra cuantos commit han hecho cada miembros del equipo.
+git shortlog -sn --all = muestra cuantos commit han hecho cada miembros del equipo hasta los que han sido eliminado
+git shortlog -sn --all --no-merge = muestra cuantos commit han hecho cada miembros quitando los eliminados sin los merges
+git blame ARCHIVO = muestra quien hizo cada cosa linea por linea
+git COMANDO --help = muestra como funciona el comando.
+git blame ARCHIVO -Llinea_inicial,linea_final= muestra quien hizo cada cosa linea por linea indicándole desde que linea ver ejemplo -L35,50
+**git branch -r **= se muestran todas las ramas remotas
+git branch -a = se muestran todas las ramas tanto locales como remotas
+
+
+
+git config --global alias.nombreDelAlias "comando de git que quiero asignarle al alias"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
