@@ -3,32 +3,32 @@
 Esta guía te proporcionará los comandos básicos para comenzar a usar Git en tu proyecto y manejar tu repositorio de manera eficiente.
 
 ## Inicialización y Configuración Básica
-### 1. Iniciar un repositorio Git:
+### Iniciar un repositorio Git:
 ```bash
  git init
 ```
-### 2.Ver el estado del repositorio:
+### Ver el estado del repositorio:
 ```bash
 git status
 ```
-### 3.Eliminar un archivo del área de preparación (staging area):
+### Eliminar un archivo del área de preparación (staging area):
 ```bash
 git rm --cached historia.txt
 ```
-### 4.Agregar archivos al área de preparación:
+### Agregar archivos al área de preparación:
 ```bash
 git add .
 ```
-### 5.Hacer un commit:
+### Hacer un commit:
 ```bash
 git commit -m "este es el primer commit"
 ```
-### 6.Configurar tu nombre de usuario y correo electrónico:
+### Configurar tu nombre de usuario y correo electrónico:
 ```bash
 git config --global user.name "Miguel Calderon"
 git config --global user.email "miguelcalderon.dev@gmail.com"
 ```
-### 7.Ver Cambios y Diferencias
+### Ver Cambios y Diferencias
 #### Ver los cambios de un archivo específico:
 ```bash
 git show historia.txt
