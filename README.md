@@ -4,9 +4,13 @@ Esta guía te proporcionará los comandos básicos para comenzar a usar Git en t
 
 ## Inicialización y Configuración Básica
 ### 1. Iniciar un repositorio Git:
-`    git init`
+```bash
+ git init
+```
 ### 2.Ver el estado del repositorio:
-`git status`
+```bash
+git status
+```
 ### 3.Eliminar un archivo del área de preparación (staging area):
 `git rm --cached historia.txt`
 ### 4.Agregar archivos al área de preparación:
